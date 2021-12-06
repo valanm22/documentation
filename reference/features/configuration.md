@@ -152,19 +152,9 @@ If no master key is provided in a `development` environment, all routes will be 
 
 Deactivates MeiliSearch's built-in telemetry when set to `true`.
 
-MeiliSearch collects the following data from all instances that do not explicitly opt-out:
+MeiliSearch automatically collects data from all instances that do not opt out using this flag. All gathered data is used solely for the purpose of improving MeiliSearch, and can be [deleted at any time](/learn/what_is_meilisearch/telemetry.md#how-to-delete-all-collected-data).
 
-- Application version
-- Environment (development or production)
-- Number of days instance has been active since creation
-- Database size
-- Last update time
-- Number of updates
-- Number of documents per index
-
-All collected data is used solely for the purpose of improving MeiliSearch.
-
-[You can read more about our policy on data collection in our telemetry page.](/learn/what_is_meilisearch/telemetry.md)
+[Read more about our policy on data collection](/learn/what_is_meilisearch/telemetry.md), or take a look at [the comprehensive list of all datapoints we collect](/learn/what_is_meilisearch/telemetry.md#exhaustive-list-of-all-collected-data).
 
 ### Dumps destination
 
@@ -192,7 +182,7 @@ MeiliSearch will only launch once the dump data has been fully indexed. The time
 
 ### Log level
 
-**Environment variable**: MEILI_LOG_LEVEL
+**Environment variable**: `MEILI_LOG_LEVEL`
 **CLI option**: `--log-level`
 **Default value**: `'INFO'`
 **Expected value**: one of `ERROR`, `WARN`, `INFO`, `DEBUG`, OR `TRACE`
@@ -218,7 +208,7 @@ Sets the maximum size of the index. Value must be given in bytes or explicitly s
 
 The `index` stores processed data and is different from the `update` database, which handles [pending updates](/learn/advanced/asynchronous_updates.md).
 
-[Learn more about MeiliSearch's database and storage engine.](/reference/under_the_hood/storage.md)
+[Learn more about MeiliSearch's database and storage engine.](/learn/advanced/storage.md)
 
 ### Max UDB size
 
@@ -231,7 +221,7 @@ Sets the maximum size of the `update` database. Value must be given in bytes or 
 
 The `update` database handles [pending updates](/learn/advanced/asynchronous_updates.md). This is different from the `index` database, which only stores processed data.
 
-[Learn more about MeiliSearch's database and storage engine.](/reference/under_the_hood/storage.md)
+[Learn more about MeiliSearch's database and storage engine.](/learn/advanced/storage.md)
 
 ### Payload limit size
 
