@@ -60,7 +60,17 @@ module.exports = {
           children: [
             '/learn/getting_started/installation',
             '/learn/getting_started/quick_start',
-            '/learn/getting_started/meilisearch_101',
+            {
+              title: 'MeiliSearch 101',
+              path: '/learn/getting_started/meilisearch_101/',
+              collapsable: false,
+              children: [
+                '/learn/getting_started/chapter_1_filtering_and_sorting.md',
+                '/learn/getting_started/chapter_2_customizing_relevancy.md',
+                '/learn/getting_started/chapter_3_adding_a_visual_UI.md',
+                '/learn/getting_started/chapter_4_configuration_and_security.md',
+              ],
+            },
             '/learn/getting_started/whats_next',
             '/learn/getting_started/main_features.md',
           ],
