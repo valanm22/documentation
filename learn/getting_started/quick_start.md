@@ -6,7 +6,7 @@ All that is required is a [command line](https://www.learnenough.com/command-lin
 
 Let's get started!
 
-## Step 1: Install or deploy
+## Step 1: Setup and installation
 
 We'll start with downloading and installing MeiliSearch. You have the option to install MeiliSearch locally or deploy it over a cloud service.
 
@@ -213,6 +213,10 @@ MeiliSearch **response**:
 
 **By default, MeiliSearch only returns the first 20 results for a search query.**
 
+If you make a search without inputting any query words, MeiliSearch will return all the documents in that index sorted by its custom ranking rules and sorting rules. This is called placeholder search.
+
+If you enclose search terms in double quotes ("), MeiliSearch will only return documents that contain those terms in the order they were given. This gives users the option to make more precise search queries. This is called phrase search.
+
 ## Step 4: Web interface
 
 MeiliSearch offers an out-of-the-box web interface where you can test MeiliSearch interactively. You can access it on your browser at: `http://127.0.0.1:7700`.
@@ -230,5 +234,3 @@ If your MeiliSearch instance does not have any indexes, you should see this scre
 ## And that's it
 
 With MeiliSearch up and running, check out [MeiliSearch 101](/learn/getting_started/meilisearch_101.md) for a quick overview of the main features or the [API references](/reference/api/README.md) to get started!
-
-Do we want this here? A lot of quick start guides have something like this -> Please [reach out to us](/learn/what_is_meilisearch/contact.md) if you have any questions or suggestions.

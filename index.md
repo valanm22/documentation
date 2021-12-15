@@ -14,7 +14,7 @@ Welcome to the MeiliSearch documentation. Here you'll find everything you need t
 
 **Other helpful links**:
 
-- [Install MeiliSearch](/learn/getting_started/quick_start.md#step-1-install-or-deploy)
+- [Install MeiliSearch](/learn/getting_started/quick_start.md#step-1-setup-and-installation)
 - [Updating MeiliSearch](/learn/advanced/updating.md)
 - [SDKs and tools](/learn/what_is_meilisearch/sdks.md)
 - [Deploy MeiliSearch on AWS](/learn/cookbooks/aws.md)

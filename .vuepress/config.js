@@ -55,7 +55,7 @@ module.exports = {
         },
         {
           title: '🚀 Getting started',
-          path: '/learn/getting_started/',
+          path: '/learn/getting_started/quick_start/',
           collapsable: false,
           children: [
             '/learn/getting_started/quick_start',
