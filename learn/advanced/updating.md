@@ -246,7 +246,7 @@ To delete the old MeiliSearch version, you need to delete the `data.ms` folder. 
 
 ### Step 4: Import the dump
 
-Now that you’ve got your dump, [install the latest version of MeiliSearch](/learn/getting_started/installation.md#download-and-launch) and [import the dump](/reference/features/dumps.md#importing-a-dump) at launch using the [CLI option](/reference/features/configuration.md#import-dump).
+Now that you’ve got your dump, [install the latest version of MeiliSearch](/learn/getting_started/quick_start.md#step-1-install-or-deploy) and [import the dump](/reference/features/dumps.md#importing-a-dump) at launch using the [CLI option](/reference/features/configuration.md#import-dump).
 
 ```bash
 # launch the latest version of MeiliSearch and import the specified dump file
@@ -333,7 +333,7 @@ To delete the old MeiliSearch version, you need to delete the `data.ms` folder. 
 
 ### Step 5: Upload your data to the latest version of MeiliSearch
 
-Finally, [install the latest version of MeiliSearch](/learn/getting_started/installation.md) and upload your data as usual.
+Finally, [install the latest version of MeiliSearch](/learn/getting_started/quick_start.md#step-1-install-or-deploy) and upload your data as usual.
 
 If you chose to save your settings, make sure to follow this order:
 

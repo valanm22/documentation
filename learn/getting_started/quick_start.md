@@ -1,8 +1,10 @@
 # Quick start
 
-This quick start will help you get started with MeiliSearch in just a few steps.
+The purpose of this quick start is to give you a short introduction to the basics of MeiliSearch. We will walk you through setting up MeiliSearch, adding documents, performing your first search, and introduce you to the web interface.
 
-All that is required is a [command line](https://www.learnenough.com/command-line-tutorial#sec-running_a_terminal) for installation, and some way to interact with MeiliSearch afterwards (e.g. [cURL](https://curl.se) or one of our [SDKs](/learn/what_is_meilisearch/sdks.md)). You can find instructions to install each of our SDKs further down in the [add documents section](#step-2-add-documents) of this guide
+All that is required is a [command line](https://www.learnenough.com/command-line-tutorial#sec-running_a_terminal) for installation, and some way to interact with MeiliSearch afterwards (e.g. [cURL](https://curl.se) or one of our [SDKs](/learn/what_is_meilisearch/sdks.md)).
+
+Let's get started!
 
 ## Step 1: Install or deploy
 
@@ -147,7 +149,7 @@ You can communicate with the server through a [RESTful API](/reference/api/READM
 
 ## Step 2: Add documents
 
-Now that MeiliSearch is up and running, the next step is adding documents. A [document](/learn/core_concepts/documents.md) is an object that contains data in the form of one or more fields. MeiliSearch currently accepts documents in the JSON, NDJSON, and CSV formats.
+The next step is adding documents. A [document](/learn/core_concepts/documents.md) is an object that contains data in the form of one or more fields. MeiliSearch currently accepts documents in the JSON, NDJSON, and CSV formats.
 
 Your documents are stored in an [index](/learn/core_concepts/indexes.md). If the index does not exist, MeiliSearch creates it when you first add documents.
 
@@ -177,7 +179,7 @@ You can use the `uid` to view additional details on the [task's progress](/refer
 
 ## Step 3: Search
 
-Now that you have MeiliSearch setup, you can start searching! MeiliSearch [offers many parameters](/reference/features/search_parameters.md) that you can play with to refine your search or change the format of the returned documents. However, by default, the search is already relevant.
+Now that you have MeiliSearch all set up, let's start searching! MeiliSearch [offers many parameters](/reference/features/search_parameters.md) that you can play with to refine your search or change the format of the returned documents. However, by default, the search is already relevant.
 
 <CodeSamples id="getting_started_search_md" />
 
@@ -209,7 +211,7 @@ MeiliSearch **response**:
 }
 ```
 
-**By default, MeiliSearch returns only the first 20 results for a search query.**
+**By default, MeiliSearch only returns the first 20 results for a search query.**
 
 ## Step 4: Web interface
 
@@ -225,6 +227,8 @@ If your MeiliSearch instance does not have any indexes, you should see this scre
 
 ![no documents](/getting-started/web_interface_without_documents.png)
 
-We will be using this interface to demonstrate some features in future chapters.
+## And that's it
 
--> where does the user go next? MeiliSearch 101 for a tour or ?
+With MeiliSearch up and running, check out [MeiliSearch 101](/learn/getting_started/meilisearch_101.md) for a quick overview of the main features or the [API references](/reference/api/README.md) to get started!
+
+Do we want this here? A lot of quick start guides have something like this -> Please [reach out to us](/learn/what_is_meilisearch/contact.md) if you have any questions or suggestions.

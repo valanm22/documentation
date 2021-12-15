@@ -58,7 +58,6 @@ module.exports = {
           path: '/learn/getting_started/',
           collapsable: false,
           children: [
-            '/learn/getting_started/installation',
             '/learn/getting_started/quick_start',
             {
               title: 'MeiliSearch 101',
@@ -71,8 +70,6 @@ module.exports = {
                 '/learn/getting_started/chapter_4_configuration_and_security.md',
               ],
             },
-            '/learn/getting_started/whats_next',
-            '/learn/getting_started/main_features.md',
           ],
         },
         {

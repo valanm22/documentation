@@ -52,7 +52,7 @@ apt install curl -y
 curl -L https://install.meilisearch.com | sh
 ```
 
-The different MeiliSearch installation options are detailed in [this guide](/learn/getting_started/installation.md#download-and-launch).
+The different MeiliSearch installation options are detailed in [this guide](/learn/getting_started/quick_start.md#step-1-install-or-deploy).
 
 **There are many different ways to get MeiliSearch running on your machine.** As an open-source project, you can always compile the latest stable release of MeiliSearch from its source code to ensure the binary uses your architecture in the best possible way.
 
@@ -121,7 +121,7 @@ EOF
 ```
 
 ::: tip
-For more information on MeiliSearch authentication and API keys see the [authentication docs](/reference/features/authentication.md). For more information on MeiliSearch options and flags see the [installation docs](/learn/getting_started/installation.md#download-and-launch).
+For more information on MeiliSearch authentication and API keys see the [authentication docs](/reference/features/authentication.md). For more information on MeiliSearch options and flags see the [installation docs](/learn/getting_started/quick_start.md#step-1-install-or-deploy).
 :::
 
 As for now, it is not time yet to expose your MeiliSearch instance to the external world. To keep running it safely inside your own environment, make it available locally at `127.0.0.1`. This means that only programs running on your machine are allowed to make requests to your MeiliSearch instance.
