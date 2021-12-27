@@ -159,7 +159,7 @@ Your documents are stored in an [index](/learn/core_concepts/indexes.md). If the
 
 You can set the primary key manually on index creation or document addition. If no primary key is set, MeiliSearch automatically guesses the primary key when you add documents.
 
-To add documents to an index called `movies`, use:
+To create an index called `movies` and add documents there, use:
 
 <CodeSamples id="getting_started_add_documents_md" />
 
