@@ -163,7 +163,7 @@ To create an index called `movies` and add documents there, use:
 
 <CodeSamples id="getting_started_add_documents_md" />
 
-Here's an example of the kind of response you should receive after adding documents.
+After adding documents, you should receive a response like this:
 
 ```json
 {
@@ -215,9 +215,7 @@ MeiliSearch **response**:
 
 **By default, MeiliSearch only returns the first 20 results for a search query.**
 
-If you make a search without inputting any query words, MeiliSearch will return all the documents in that index sorted by its custom ranking rules and sorting rules. This is called placeholder search.
 
-If you enclose search terms in double quotes ("), MeiliSearch will only return documents that contain those terms in the order they were given. This gives users the option to make more precise search queries. This is called phrase search.
 
 ## Step 4: Web interface
 
