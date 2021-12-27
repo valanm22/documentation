@@ -147,17 +147,13 @@ Database path:       "./data.ms"
 Server listening on: "127.0.0.1:7700"
 ```
 
-You can communicate with the server through a [RESTful API](/reference/api/README.md) or one of our [SDKs](/learn/what_is_meilisearch/sdks.md).
+Please note that **if you're using a terminal, you will need to open a second window in addition the one running MeiliSearch and use that second window to send the curl commands**.
 
 ## Step 2: Add documents
 
-The next step is adding documents. A [document](/learn/core_concepts/documents.md) is an object that contains data in the form of one or more fields. MeiliSearch currently accepts documents in the JSON, NDJSON, and CSV formats.
+Now that you have [successfully launched a MeiliSearch instance](#step-1-setup-and-installation), the next step is adding some data to search through.
 
-Your documents are stored in an [index](/learn/core_concepts/indexes.md). If the index does not exist, MeiliSearch creates it when you first add documents.
-
-**All documents must have a [primary key](/learn/core_concepts/documents.md#primary-field).** Each index recognizes only one primary key attribute. Once a primary key has been set for an index, it cannot be changed. If no primary key is found in a document, the document will not be stored.
-
-You can set the primary key manually on index creation or document addition. If no primary key is set, MeiliSearch automatically guesses the primary key when you add documents.
+MeiliSearch stores data in the form of discrete records, called [documents](/learn/core_concepts/documents.md). Documents are grouped into large collections, called [indexes](/learn/core_concepts/indexes.md).
 
 To create an index called `movies` and add documents there, use:
 
@@ -175,13 +171,49 @@ After adding documents, you should receive a response like this:
 }
 ```
 
-Document addition is an [asynchronous](/learn/advanced/asynchronous_updates.md) operation. All asynchronous operations return the above response indicating that the operation has been taken into account and will be processed once it reaches the front of the queue.
+Like most database operations in MeiliSearch, document addition is [asynchronous](/learn/advanced/asynchronous_updates.md). This means that the operation will be added to a queue and processed when it reaches the front, rather than happening immediately.
 
-You can use the `uid` to view additional details on the [task's progress](/reference/api/updates.md).
+You can use the returned `uid` to [check the status](/reference/api/updates.md) of your document addition request:
+
+<CodeSamples id="getting_started_check_status_md" />
+
+If the document addition is successful, your response should look like this:
+
+```json
+{
+   "uid":0,
+   "indexUid":"movies",
+   "status":"succeeded",
+   "type":"documentAddition",
+   "details":{
+      "receivedDocuments":19547,
+      "indexedDocuments":19547
+   },
+   "duration":"PT0.030750S",
+   "enqueuedAt":"2021-12-20T12:39:18.349288Z",
+   "startedAt":"2021-12-20T12:39:18.352490Z",
+   "finishedAt":"2021-12-20T12:39:18.380038Z"
+}
+```
+
+If it is still in the queue:
+
+```json
+{
+   "uid": 0,
+   "indexUid": "movies",
+   "status": "enqueued",
+   "type": "documentAddition",
+   "duration": null,
+   "enqueuedAt": "2021-08-12T10:00:00.000000Z",
+   "startedAt": null,
+   "finishedAt": null
+}
+```
 
 ## Step 3: Search
 
-Now that you have MeiliSearch all set up, let's start searching! MeiliSearch [offers many parameters](/reference/features/search_parameters.md) that you can play with to refine your search or change the format of the returned documents. However, by default, the search is already relevant.
+Now that you have MeiliSearch all set up, let's start searching!
 
 <CodeSamples id="getting_started_search_md" />
 
@@ -214,8 +246,6 @@ MeiliSearch **response**:
 ```
 
 You may notice that by default, MeiliSearch only returns the first 20 results for a search query. This can be changed using the [`limit` parameter](/reference/features/search_parameters.md#limit).
-
-
 
 ## Step 4: Web interface
 
