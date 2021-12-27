@@ -64,10 +64,14 @@ module.exports = {
               path: '/learn/getting_started/meilisearch_101/',
               collapsable: false,
               children: [
-                '/learn/getting_started/chapter_1_filtering_and_sorting.md',
-                '/learn/getting_started/chapter_2_customizing_relevancy.md',
-                '/learn/getting_started/chapter_3_adding_a_visual_UI.md',
-                '/learn/getting_started/chapter_4_configuration_and_security.md',
+                {
+                  title: 'Introduction',
+                  path: '/learn/getting_started/meilisearch_101',
+                },
+                '/learn/getting_started/chapter_1_filtering_and_sorting',
+                '/learn/getting_started/chapter_2_customizing_relevancy',
+                '/learn/getting_started/chapter_3_adding_a_visual_UI',
+                '/learn/getting_started/chapter_4_configuration_and_security',
               ],
             },
           ],
