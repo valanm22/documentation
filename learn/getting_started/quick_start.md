@@ -10,6 +10,8 @@ Let's get started!
 
 We'll start with downloading and installing MeiliSearch. You have the option to install MeiliSearch locally or deploy it over a cloud service.
 
+### Local installation
+
 :::: tabs
 
 ::: tab cURL
