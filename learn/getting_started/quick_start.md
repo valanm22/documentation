@@ -213,7 +213,7 @@ MeiliSearch **response**:
 }
 ```
 
-**By default, MeiliSearch only returns the first 20 results for a search query.**
+You may notice that by default, MeiliSearch only returns the first 20 results for a search query. This can be changed using the [`limit` parameter](/reference/features/search_parameters.md#limit).
 
 
 
