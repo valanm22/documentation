@@ -71,6 +71,8 @@ documents_guide_add_movie_1: |-
 getting_started_add_documents_md: |-
 getting_started_search_md: |-
 getting_started_check_task_status_md: |-
+getting_started_update_stop_words_md: |-
+getting_started_synonyms_md: |-
 getting_started_update_displayedAttributes_md: |-
 getting_started_limit_md: |-
 getting_started_geoRadius_md: |-

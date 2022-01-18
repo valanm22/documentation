@@ -175,7 +175,7 @@ Like most database operations in MeiliSearch, document addition is [asynchronous
 
 You can use the returned `uid` to [check the status](/reference/api/updates.md) of your document addition request:
 
-<CodeSamples id="getting_started_check_status_md" />
+<CodeSamples id="getting_started_check_task_status_md" />
 
 If the document addition is successful, your response should look like this:
 
