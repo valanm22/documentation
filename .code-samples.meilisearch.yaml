@@ -435,6 +435,20 @@ getting_started_search_md: |-
     -H 'Content-Type: application/json' \
     --data-binary '{ "q": "botman" }'
   ```
+getting_started_update_rankingRules_md: |-
+  curl \
+    -X POST 'http://localhost:7700/indexes/movies/settings/ranking-rules' \
+    -H 'Content-Type: application/json' \
+    --data-binary '[ 
+        "exactness",
+        "words",
+        "typo",
+        "proximity",
+        "attribute",
+        "sort",
+        "release_date:asc",
+        "rank:desc"
+    ]'
 getting_started_update_displayedAttributes_md: |-
   curl \
     -X POST 'http://localhost:7700/indexes/movies/settings/displayed-attributes' \
@@ -443,6 +457,13 @@ getting_started_update_displayedAttributes_md: |-
         "title",
         "overview",
         "poster"
+    ]'
+getting_started_update_searchableAttributes_md: |-
+  curl \
+    -X POST 'http://localhost:7700/indexes/movies/settings/searchable-attributes' \
+    -H 'Content-Type: application/json' \
+    --data-binary '[
+        "title"
     ]'
 getting_started_update_stop_words_md: |-
   curl \
@@ -470,12 +491,12 @@ getting_started_attributesToCrop_md: |-
   curl \
     -X POST 'http://localhost:7700/indexes/movies/search' \
     -H 'Content-Type: application/json' \
-    --data-binary '{ "q": "shifu", "attributesToCrop": ["overview"], "cropLength": 10 }'
+    --data-binary '{ "q": "school", "attributesToCrop": ["overview"], "cropLength": 5 }'
 getting_started_limit_md: |-
   curl \
     -X POST 'http://localhost:7700/indexes/movies/search' \
     -H 'Content-Type: application/json' \
-    --data-binary '{ "q": "shifu", "limit": 10 }'
+    --data-binary '{ "q": "bear", "limit": 10 }'
 getting_started_geoRadius_md: |-
   curl \
     -X POST 'http://localhost:7700/indexes/meteors/search' \
