@@ -204,7 +204,7 @@ Now that you have MeiliSearch all set up, let's start searching!
 
 <CodeSamples id="getting_started_search_md" />
 
-In the above code sample, the parameter `q` represents the search query. The documents you added in [step two](#step-2-add-documents) will be searched for text that matches `botman`. 
+In the above code sample, the parameter `q` represents the search query. The documents you added in [step two](#step-2-add-documents) will be searched for text that matches `botman`.
 
 MeiliSearch **response**:
 
