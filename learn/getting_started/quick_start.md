@@ -196,26 +196,15 @@ If the document addition is successful, your response should look like this:
 }
 ```
 
-If it is still in the queue:
-
-```json
-{
-   "uid": 0,
-   "indexUid": "movies",
-   "status": "enqueued",
-   "type": "documentAddition",
-   "duration": null,
-   "enqueuedAt": "2021-08-12T10:00:00.000000Z",
-   "startedAt": null,
-   "finishedAt": null
-}
-```
+If the task's `status` is still `enqueued` or `processing`, the response may look slightly different. All you have to do is wait a short time and try again. Once the task `status` is `succeeded`, proceed to the next step.
 
 ## Step 3: Search
 
 Now that you have MeiliSearch all set up, let's start searching!
 
 <CodeSamples id="getting_started_search_md" />
+
+In the above code sample, the parameter `q` represents the search query. The documents you added in [step two](#step-2-add-documents) will be searched for text that matches `botman`. 
 
 MeiliSearch **response**:
 
@@ -249,7 +238,7 @@ You may notice that by default, MeiliSearch only returns the first 20 results fo
 
 ## Step 4: Web interface
 
-MeiliSearch offers an out-of-the-box web interface where you can test MeiliSearch interactively. You can access it on your browser at: `http://127.0.0.1:7700`.
+MeiliSearch offers an out-of-the-box web interface where you can test it interactively. While MeiliSearch is running, you can access it on your browser at `http://127.0.0.1:7700`.
 
 <MovieGif />
 
@@ -263,4 +252,4 @@ If your MeiliSearch instance does not have any indexes, you should see this scre
 
 ## And that's it
 
-With MeiliSearch up and running, check out [MeiliSearch 101](/learn/getting_started/meilisearch_101.md) for a quick overview of the main features or the [API references](/reference/api/README.md) to get started!
+You now know all the basics: how to create an index, add documents, check the status of an asynchronous task, and perform a search. To keep going, check out [MeiliSearch 101](/learn/getting_started/meilisearch_101.md) for a guided overview of the main features or the [API references](/reference/api/README.md) to dive right in!
