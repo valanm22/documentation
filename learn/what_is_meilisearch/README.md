@@ -29,7 +29,7 @@ Meilisearch helps the Rust community find crates on [crates.meilisearch.com](htt
   - [Highlighting](/learn/what_is_meilisearch/features.md#highlighting): Highlighted search results in documents
   - [Synonyms](/learn/what_is_meilisearch/features.md#synonyms): define synonyms for a better search experience.
 - **RESTful API**
-- [Integrated web interface](/reference/features/web_interface.md): allows you to test your search settings without implementing a front-end
+- [Integrated search preview](/reference/features/web_interface.md): allows you to test your search settings without implementing a front-end
 
 ## Philosophy
 
@@ -51,4 +51,4 @@ Instead of showing you examples, why not just invite you to test MeiliSearch int
 
 There's no need to write a single line of front-end code. All you need to do is follow [this guide](/reference/features/web_interface.md) to give the search engine a try!
 
-![web interface](/web-interface.png)
+![search preview](/web-interface.png)

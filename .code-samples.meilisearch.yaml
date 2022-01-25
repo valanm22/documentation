@@ -486,12 +486,12 @@ getting_started_attributesToHighlight_md: |-
   curl \
     -X POST 'http://localhost:7700/indexes/movies/search' \
     -H 'Content-Type: application/json' \
-    --data-binary '{ "q": "winter feast", "attributesToHighlight": ["overview"] }'   
+    --data-binary '{ "q": "cheese", "attributesToHighlight": ["overview"] }'   
 getting_started_attributesToCrop_md: |-
   curl \
     -X POST 'http://localhost:7700/indexes/movies/search' \
     -H 'Content-Type: application/json' \
-    --data-binary '{ "q": "school", "attributesToCrop": ["overview"], "cropLength": 5 }'
+    --data-binary '{ "q": "potatos", "attributesToCrop": ["overview"], "cropLength": 5 }'
 getting_started_limit_md: |-
   curl \
     -X POST 'http://localhost:7700/indexes/movies/search' \
@@ -515,6 +515,9 @@ getting_started_sorting_md: |-
       "sort": [
         "mass:asc"
       ]}'
+getting_started_communicating_with_a_protected_instance: |-
+  curl -X POST 'http://127.0.0.1:7700/indexes/patient_medical_records/search' \
+    -H 'Authorization: Bearer apiKey'      
 faceted_search_update_settings_1: |-
   curl \
     -X POST 'http://localhost:7700/indexes/movies/settings' \

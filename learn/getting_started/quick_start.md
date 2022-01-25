@@ -1,6 +1,6 @@
 # Quick start
 
-The purpose of this quick start is to give you a short introduction to the basics of MeiliSearch. We will walk you through setting up MeiliSearch, adding documents, performing your first search, and introduce you to the web interface.
+The purpose of this quick start is to give you a short introduction to the basics of MeiliSearch. We will walk you through setting up MeiliSearch, adding documents, performing your first search, and introduce you to the search preview.
 
 All that is required is a [command line](https://www.learnenough.com/command-line-tutorial#sec-running_a_terminal) for installation, and some way to interact with MeiliSearch afterwards (e.g. [cURL](https://curl.se) or one of our [SDKs](/learn/what_is_meilisearch/sdks.md)).
 
@@ -155,7 +155,7 @@ Now that you have [successfully launched a MeiliSearch instance](#step-1-setup-a
 
 MeiliSearch stores data in the form of discrete records, called [documents](/learn/core_concepts/documents.md). Documents are grouped into large collections, called [indexes](/learn/core_concepts/indexes.md).
 
-To create an index called `movies` and add documents there, use:
+To create an index called `movies` and add documents there, run the following command:
 
 <CodeSamples id="getting_started_add_documents_md" />
 
@@ -236,20 +236,18 @@ MeiliSearch **response**:
 
 You may notice that by default, MeiliSearch only returns the first 20 results for a search query. This can be changed using the [`limit` parameter](/reference/features/search_parameters.md#limit).
 
-## Step 4: Web interface
+## Step 4: Search preview
 
-MeiliSearch offers an out-of-the-box web interface where you can test it interactively. While MeiliSearch is running, you can access it on your browser at `http://127.0.0.1:7700`.
-
-<MovieGif />
-
-If you have multiple indexes, you can switch between them using the indexes dropdown.
-
-![multiple indexes](/getting-started/multiple_indexes.png)
+MeiliSearch offers an out-of-the-box search preview where you can test it interactively. While MeiliSearch is running, you can access it on your browser at `http://127.0.0.1:7700`.
 
 If your MeiliSearch instance does not have any indexes, you should see this screen.
 
 ![no documents](/getting-started/web_interface_without_documents.png)
 
+If you have multiple indexes, you can switch between them using the indexes dropdown.
+
+![multiple indexes](/getting-started/multiple_indexes.png)
+
 ## And that's it
 
-You now know all the basics: how to create an index, add documents, check the status of an asynchronous task, and perform a search. To keep going, check out [MeiliSearch 101](/learn/getting_started/meilisearch_101.md) for a guided overview of the main features or the [API references](/reference/api/README.md) to dive right in!
+You now know all the basics: how to create an index, add documents, check the status of an asynchronous task, and perform a search. To keep going, check out [MeiliSearch 101](/learn/getting_started/chapter_1_filtering_and_sorting.md) for a guided overview of the main features or the [API references](/reference/api/README.md) to dive right in!

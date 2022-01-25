@@ -61,13 +61,9 @@ module.exports = {
             '/learn/getting_started/quick_start',
             {
               title: 'MeiliSearch 101',
-              path: '/learn/getting_started/meilisearch_101/',
+              path: '/learn/getting_started/chapter_1_filtering_and_sorting/',
               collapsable: false,
               children: [
-                {
-                  title: 'Introduction',
-                  path: '/learn/getting_started/meilisearch_101',
-                },
                 '/learn/getting_started/chapter_1_filtering_and_sorting',
                 '/learn/getting_started/chapter_2_customizing_relevancy',
                 '/learn/getting_started/chapter_3_adding_a_visual_UI',
