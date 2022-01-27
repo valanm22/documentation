@@ -5,7 +5,7 @@
 ---
 get_one_index_1: |-
   curl \
-    -X GET 'http://localhost:7700/indexes/movies'
+    -X GET 'http://localhost:7700/indexes/meteors'
 list_all_indexes_1: |-
   curl \
     -X GET 'http://localhost:7700/indexes'
@@ -14,7 +14,7 @@ create_an_index_1: |-
     -X POST 'http://localhost:7700/indexes' \
     -H 'Content-Type: application/json' \
     --data-binary '{
-      "uid": "movies",
+      "uid": "meteors",
       "primaryKey": "movie_id"
     }'
 update_an_index_1: |-
@@ -26,16 +26,16 @@ update_an_index_1: |-
     }'
 delete_an_index_1: |-
   curl \
-    -X DELETE 'http://localhost:7700/indexes/movies'
+    -X DELETE 'http://localhost:7700/indexes/meteors'
 get_one_document_1: |-
   curl \
-    -X GET 'http://localhost:7700/indexes/movies/documents/25684'
+    -X GET 'http://localhost:7700/indexes/meteors/documents/25684'
 get_documents_1: |-
   curl \
-    -X GET 'http://localhost:7700/indexes/movies/documents?limit=2'
+    -X GET 'http://localhost:7700/indexes/meteors/documents?limit=2'
 add_or_replace_documents_1: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/documents' \
+    -X POST 'http://localhost:7700/indexes/meteors/documents' \
     -H 'Content-Type: application/json' \
     --data-binary '[{
         "id": 287947,
@@ -46,7 +46,7 @@ add_or_replace_documents_1: |-
     }]'
 add_or_update_documents_1: |-
   curl \
-    -X PUT 'http://localhost:7700/indexes/movies/documents' \
+    -X PUT 'http://localhost:7700/indexes/meteors/documents' \
     -H 'Content-Type: application/json' \
     --data-binary '[{
         "id": 287947,
@@ -55,13 +55,13 @@ add_or_update_documents_1: |-
     }]'
 delete_all_documents_1: |-
   curl \
-    -X DELETE 'http://localhost:7700/indexes/movies/documents'
+    -X DELETE 'http://localhost:7700/indexes/meteors/documents'
 delete_one_document_1: |-
   curl \
-    -X DELETE 'http://localhost:7700/indexes/movies/documents/25684'
+    -X DELETE 'http://localhost:7700/indexes/meteors/documents/25684'
 delete_documents_1: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/documents/delete-batch' \
+    -X POST 'http://localhost:7700/indexes/meteors/documents/delete-batch' \
     -H 'Content-Type: application/json' \
     --data-binary '[
         23488,
@@ -71,28 +71,28 @@ delete_documents_1: |-
     ]'
 search_post_1: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/search' \
+    -X POST 'http://localhost:7700/indexes/meteors/search' \
     -H 'Content-Type: application/json' \
     --data-binary '{ "q": "american ninja" }'
 search_get_1: |-
   curl \
-    -X GET 'http://localhost:7700/indexes/movies/search?q=american%20ninja'
+    -X GET 'http://localhost:7700/indexes/meteors/search?q=american%20ninja'
 get_update_1: |-
   curl \
-    -X GET 'http://localhost:7700/indexes/movies/updates/1'
+    -X GET 'http://localhost:7700/indexes/meteors/updates/1'
 get_all_updates_1: |-
   curl \
-    -X GET 'http://localhost:7700/indexes/movies/updates'
+    -X GET 'http://localhost:7700/indexes/meteors/updates'
 get_keys_1: |-
   curl \
     -H "X-Meili-API-Key: 123" \
     -X GET 'http://localhost:7700/keys'
 get_settings_1: |-
   curl \
-    -X GET 'http://localhost:7700/indexes/movies/settings'
+    -X GET 'http://localhost:7700/indexes/meteors/settings'
 update_settings_1: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/settings' \
+    -X POST 'http://localhost:7700/indexes/meteors/settings' \
     -H 'Content-Type: application/json' \
     --data-binary '{
         "rankingRules": [
@@ -133,13 +133,13 @@ update_settings_1: |-
     }'
 reset_settings_1: |-
   curl \
-    -X DELETE 'http://localhost:7700/indexes/movies/settings'
+    -X DELETE 'http://localhost:7700/indexes/meteors/settings'
 get_synonyms_1: |-
   curl \
-    -X GET 'http://localhost:7700/indexes/movies/settings/synonyms'
+    -X GET 'http://localhost:7700/indexes/meteors/settings/synonyms'
 update_synonyms_1: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/settings/synonyms' \
+    -X POST 'http://localhost:7700/indexes/meteors/settings/synonyms' \
     -H 'Content-Type: application/json' \
     --data-binary '{
       "wolverine": ["xmen", "logan"],
@@ -148,24 +148,24 @@ update_synonyms_1: |-
     }'
 reset_synonyms_1: |-
   curl \
-    -X DELETE 'http://localhost:7700/indexes/movies/settings/synonyms'
+    -X DELETE 'http://localhost:7700/indexes/meteors/settings/synonyms'
 get_stop_words_1: |-
   curl \
-    -X GET 'http://localhost:7700/indexes/movies/settings/stop-words'
+    -X GET 'http://localhost:7700/indexes/meteors/settings/stop-words'
 update_stop_words_1: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/settings/stop-words' \
+    -X POST 'http://localhost:7700/indexes/meteors/settings/stop-words' \
     -H 'Content-Type: application/json' \
     --data-binary '["the", "of", "to"]'
 reset_stop_words_1: |-
   curl \
-    -X DELETE 'http://localhost:7700/indexes/movies/settings/stop-words'
+    -X DELETE 'http://localhost:7700/indexes/meteors/settings/stop-words'
 get_ranking_rules_1: |-
   curl \
-    -X GET 'http://localhost:7700/indexes/movies/settings/ranking-rules'
+    -X GET 'http://localhost:7700/indexes/meteors/settings/ranking-rules'
 update_ranking_rules_1: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/settings/ranking-rules' \
+    -X POST 'http://localhost:7700/indexes/meteors/settings/ranking-rules' \
     -H 'Content-Type: application/json' \
     --data-binary '[
         "words",
@@ -179,7 +179,7 @@ update_ranking_rules_1: |-
     ]'
 reset_ranking_rules_1: |-
   curl \
-    -X DELETE 'http://localhost:7700/indexes/movies/settings/ranking-rules'
+    -X DELETE 'http://localhost:7700/indexes/meteors/settings/ranking-rules'
 get_distinct_attribute_1: |-
   curl \
     -X GET 'http://localhost:7700/indexes/shoes/settings/distinct-attribute'
@@ -193,10 +193,10 @@ reset_distinct_attribute_1: |-
     -X DELETE 'http://localhost:7700/indexes/shoes/settings/distinct-attribute'
 get_filterable_attributes_1: |-
   curl \
-    -X GET 'http://localhost:7700/indexes/movies/settings/filterable-attributes'
+    -X GET 'http://localhost:7700/indexes/meteors/settings/filterable-attributes'
 update_filterable_attributes_1: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/settings/filterable-attributes' \
+    -X POST 'http://localhost:7700/indexes/meteors/settings/filterable-attributes' \
     -H 'Content-Type: application/json' \
     --data-binary '[
         "genres",
@@ -204,13 +204,13 @@ update_filterable_attributes_1: |-
     ]'
 reset_filterable_attributes_1: |-
   curl \
-    -X DELETE 'http://localhost:7700/indexes/movies/settings/filterable-attributes'
+    -X DELETE 'http://localhost:7700/indexes/meteors/settings/filterable-attributes'
 get_searchable_attributes_1: |-
   curl \
-    -X GET 'http://localhost:7700/indexes/movies/settings/searchable-attributes'
+    -X GET 'http://localhost:7700/indexes/meteors/settings/searchable-attributes'
 update_searchable_attributes_1: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/settings/searchable-attributes' \
+    -X POST 'http://localhost:7700/indexes/meteors/settings/searchable-attributes' \
     -H 'Content-Type: application/json' \
     --data-binary '[
         "title",
@@ -219,13 +219,13 @@ update_searchable_attributes_1: |-
     ]'
 reset_searchable_attributes_1: |-
   curl \
-    -X DELETE 'http://localhost:7700/indexes/movies/settings/searchable-attributes'
+    -X DELETE 'http://localhost:7700/indexes/meteors/settings/searchable-attributes'
 get_displayed_attributes_1: |-
   curl \
-    -X GET 'http://localhost:7700/indexes/movies/settings/displayed-attributes'
+    -X GET 'http://localhost:7700/indexes/meteors/settings/displayed-attributes'
 update_displayed_attributes_1: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/settings/displayed-attributes' \
+    -X POST 'http://localhost:7700/indexes/meteors/settings/displayed-attributes' \
     -H 'Content-Type: application/json' \
     --data-binary '[
         "title",
@@ -235,10 +235,10 @@ update_displayed_attributes_1: |-
     ]'
 reset_displayed_attributes_1: |-
   curl \
-    -X DELETE 'http://localhost:7700/indexes/movies/settings/displayed-attributes'
+    -X DELETE 'http://localhost:7700/indexes/meteors/settings/displayed-attributes'
 get_index_stats_1: |-
   curl \
-    -X GET 'http://localhost:7700/indexes/movies/stats'
+    -X GET 'http://localhost:7700/indexes/meteors/stats'
 get_indexes_stats_1: |-
   curl \
     -X GET 'http://localhost:7700/stats'
@@ -255,7 +255,7 @@ distinct_attribute_guide_1: |-
     --data-binary '{ "distinctAttribute": "product_id" }'
 field_properties_guide_searchable_1: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/settings' \
+    -X POST 'http://localhost:7700/indexes/meteors/settings' \
     -H 'Content-Type: application/json' \
     --data-binary '{
         "searchableAttributes": [
@@ -266,7 +266,7 @@ field_properties_guide_searchable_1: |-
     }'
 field_properties_guide_displayed_1: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/settings' \
+    -X POST 'http://localhost:7700/indexes/meteors/settings' \
     -H 'Content-Type: application/json' \
     --data-binary '{
         "displayedAttributes": [
@@ -278,52 +278,52 @@ field_properties_guide_displayed_1: |-
     }'
 filtering_guide_1: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/search' \
+    -X POST 'http://localhost:7700/indexes/meteors/search' \
     -H 'Content-Type: application/json' \
     --data-binary '{ "q": "Avengers", "filter": "release_date > 795484800" }'
 filtering_guide_2: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/search' \
+    -X POST 'http://localhost:7700/indexes/meteors/search' \
     -H 'Content-Type: application/json' \
     --data-binary '{ "q":"Batman",  "filter": "release_date > 795484800 AND (director = \"Tim Burton\" OR director = \"Christopher Nolan\")" }'
 filtering_guide_3: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/search' \
+    -X POST 'http://localhost:7700/indexes/meteors/search' \
     -H 'Content-Type: application/json' \
     --data-binary '{ "q": "Planet of the Apes", "filter": "rating >= 3 AND (NOT director = \"Tim Burton\")" }' \
 search_parameter_guide_query_1: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/search' \
+    -X POST 'http://localhost:7700/indexes/meteors/search' \
     -H 'Content-Type: application/json' \
     --data-binary '{ "q": "shifu" }'
 search_parameter_guide_offset_1: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/search' \
+    -X POST 'http://localhost:7700/indexes/meteors/search' \
     -H 'Content-Type: application/json' \
     --data-binary '{ "q": "shifu", "offset": 1 }'
 search_parameter_guide_limit_1: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/search' \
+    -X POST 'http://localhost:7700/indexes/meteors/search' \
     -H 'Content-Type: application/json' \
     --data-binary '{ "q": "shifu", "limit": 2 }'
 search_parameter_guide_retrieve_1: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/search' \
+    -X POST 'http://localhost:7700/indexes/meteors/search' \
     -H 'Content-Type: application/json' \
     --data-binary '{ "q": "shifu", "attributesToRetrieve": ["overview", "title"] }'
 search_parameter_guide_crop_1: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/search' \
+    -X POST 'http://localhost:7700/indexes/meteors/search' \
     -H 'Content-Type: application/json' \
     --data-binary '{ "q": "shifu", "attributesToCrop": ["overview"], "cropLength": 10 }'
 search_parameter_guide_highlight_1: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/search' \
+    -X POST 'http://localhost:7700/indexes/meteors/search' \
     -H 'Content-Type: application/json' \
     --data-binary '{ "q": "winter feast", "attributesToHighlight": ["overview"] }'
 search_parameter_guide_matches_1: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/search' \
+    -X POST 'http://localhost:7700/indexes/meteors/search' \
     -H 'Content-Type: application/json' \
     --data-binary '{ "q": "winter feast", "matches": true }'
 settings_guide_synonyms_1: |-
@@ -338,7 +338,7 @@ settings_guide_synonyms_1: |-
     }'
 settings_guide_stop_words_1: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/settings' \
+    -X POST 'http://localhost:7700/indexes/meteors/settings' \
     -H 'Content-Type: application/json' \
     --data-binary '{
         "stopWords": [
@@ -349,7 +349,7 @@ settings_guide_stop_words_1: |-
     }'
 settings_guide_ranking_rules_1: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/settings' \
+    -X POST 'http://localhost:7700/indexes/meteors/settings' \
     -H 'Content-Type: application/json' \
     --data-binary '{
         "rankingRules": [
@@ -372,7 +372,7 @@ settings_guide_distinct_1: |-
     }
 settings_guide_searchable_1: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/settings' \
+    -X POST 'http://localhost:7700/indexes/meteors/settings' \
     -H 'Content-Type: application/json' \
     --data-binary '{
         "searchableAttributes": [
@@ -383,7 +383,7 @@ settings_guide_searchable_1: |-
     }'
 settings_guide_displayed_1: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/settings' \
+    -X POST 'http://localhost:7700/indexes/meteors/settings' \
     -H 'Content-Type: application/json' \
     --data-binary '{
         "displayedAttributes": [
@@ -405,12 +405,12 @@ settings_guide_sortable_1: |-
     }'
 add_movies_json_1: |-
   curl \
-    -X POST 'http://127.0.0.1:7700/indexes/movies/documents'\
+    -X POST 'http://127.0.0.1:7700/indexes/meteors/documents'\
     -H 'Content-Type: application/json' \
-    --data-binary @movies.json
+    --data-binary @meteors.json
 documents_guide_add_movie_1: |-
   curl \
-    -X POST `http://localhost:7700/indexes/movies/documents` \
+    -X POST `http://localhost:7700/indexes/meteors/documents` \
     -H 'Content-Type: application/json' \
     --data-binary '[
       {
@@ -421,23 +421,30 @@ documents_guide_add_movie_1: |-
 getting_started_add_documents_md: |-
   ```bash
   curl \
-    -X POST 'http://127.0.0.1:7700/indexes/movies/documents' \
+    -X POST 'http://127.0.0.1:7700/indexes/meteors/documents' \
     -H 'Content-Type: application/json' \
-    --data-binary @movies.json
+    --data-binary @meteors.json
   ```
 getting_started_check_task_status_md: |-
+  ```bash
   curl \
-    -X GET 'http://localhost:7700/indexes/movies/tasks/0'
+    -X GET 'http://localhost:7700/indexes/meteors/tasks/0'
+  ```
 getting_started_search_md: |-
   ```bash
   curl \
-    -X POST 'http://127.0.0.1:7700/indexes/movies/search' \
+    -X POST 'http://127.0.0.1:7700/indexes/meteors/search' \
     -H 'Content-Type: application/json' \
     --data-binary '{ "q": "botman" }'
   ```
+getting_started_add_meteors_md: |-
+  curl \
+    -X POST 'http://127.0.0.1:7700/indexes/meteors/documents' \
+    -H 'Content-Type: application/json' \
+    --data-binary @meteors.json
 getting_started_update_rankingRules_md: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/settings/ranking-rules' \
+    -X POST 'http://localhost:7700/indexes/meteors/settings/ranking-rules' \
     -H 'Content-Type: application/json' \
     --data-binary '[ 
         "exactness",
@@ -451,7 +458,7 @@ getting_started_update_rankingRules_md: |-
     ]'
 getting_started_update_displayedAttributes_md: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/settings/displayed-attributes' \
+    -X POST 'http://localhost:7700/indexes/meteors/settings/displayed-attributes' \
     -H 'Content-Type: application/json' \
     --data-binary '[
         "title",
@@ -460,19 +467,19 @@ getting_started_update_displayedAttributes_md: |-
     ]'
 getting_started_update_searchableAttributes_md: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/settings/searchable-attributes' \
+    -X POST 'http://localhost:7700/indexes/meteors/settings/searchable-attributes' \
     -H 'Content-Type: application/json' \
     --data-binary '[
         "title"
     ]'
 getting_started_update_stop_words_md: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/settings/stop-words' \
+    -X POST 'http://localhost:7700/indexes/meteors/settings/stop-words' \
     -H 'Content-Type: application/json' \
     --data-binary '["the"]'
 getting_started_synonyms_md: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/settings/synonyms' \
+    -X POST 'http://localhost:7700/indexes/meteors/settings/synonyms' \
     -H 'Content-Type: application/json' \
     --data-binary '{
       "winnie": ["piglet"], "piglet": ["winnie"]
@@ -484,17 +491,17 @@ getting_started_filtering_md: |-
     --data-binary '{"filter": "mass < 200"}'
 getting_started_attributesToHighlight_md: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/search' \
+    -X POST 'http://localhost:7700/indexes/meteors/search' \
     -H 'Content-Type: application/json' \
     --data-binary '{ "q": "cheese", "attributesToHighlight": ["overview"] }'   
 getting_started_attributesToCrop_md: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/search' \
+    -X POST 'http://localhost:7700/indexes/meteors/search' \
     -H 'Content-Type: application/json' \
     --data-binary '{ "q": "potatos", "attributesToCrop": ["overview"], "cropLength": 5 }'
 getting_started_limit_md: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/search' \
+    -X POST 'http://localhost:7700/indexes/meteors/search' \
     -H 'Content-Type: application/json' \
     --data-binary '{ "q": "bear", "limit": 10 }'
 getting_started_geoRadius_md: |-
@@ -520,7 +527,7 @@ getting_started_communicating_with_a_protected_instance: |-
     -H 'Authorization: Bearer apiKey'      
 faceted_search_update_settings_1: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/settings' \
+    -X POST 'http://localhost:7700/indexes/meteors/settings' \
     -H 'Content-Type: application/json' \
     --data-binary '{
         "filterableAttributes": [
@@ -530,17 +537,17 @@ faceted_search_update_settings_1: |-
     }'
 faceted_search_filter_1: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/search' \
+    -X POST 'http://localhost:7700/indexes/meteors/search' \
     -H 'Content-Type: application/json' \
     --data-binary '{ "q": "thriller", "filter": [["genres = Horror", "genres = Mystery"], "director = \"Jordan Peele\""] }'
 faceted_search_facets_distribution_1: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/search' \
+    -X POST 'http://localhost:7700/indexes/meteors/search' \
     -H 'Content-Type: application/json' \
     --data-binary '{ "q": "Batman", "facetsDistribution": ["genres"] }'
 faceted_search_walkthrough_filter_1: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/search' \
+    -X POST 'http://localhost:7700/indexes/meteors/search' \
     -H 'Content-Type: application/json' \
     --data-binary '{ "q": "thriller", "filter": [["genres = Horror", "genres = Mystery"], "director = \"Jordan Peele\""] }'
 post_dump_1: |-
@@ -550,7 +557,7 @@ get_dump_status_1: |-
   curl -X GET 'http://localhost:7700/dumps/20201101-110357260/status'
 phrase_search_1: |-
   curl \
-    -X POST 'http://localhost:7700/indexes/movies/search' \
+    -X POST 'http://localhost:7700/indexes/meteors/search' \
     -H 'Content-Type: application/json' \
     --data-binary '{ "q": "\"african american\" horror" }'
 authentication_header_1: |-

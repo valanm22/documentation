@@ -1,6 +1,6 @@
 # Quick start
 
-The purpose of this quick start is to give you a short introduction to the basics of MeiliSearch. We will walk you through setting up MeiliSearch, adding documents, performing your first search, and introduce you to the search preview.
+In this quick start we will walk you through setting up MeiliSearch, adding documents, performing your first search, and introduce you to the search preview.
 
 All that is required is a [command line](https://www.learnenough.com/command-line-tutorial#sec-running_a_terminal) for installation, and some way to interact with MeiliSearch afterwards (e.g. [cURL](https://curl.se) or one of our [SDKs](/learn/what_is_meilisearch/sdks.md)).
 
@@ -131,6 +131,8 @@ To deploy MeiliSearch on a cloud service, follow one of our dedicated guides:
 - [DigitalOcean](/learn/cookbooks/digitalocean_droplet.md)
 - [Qovery](/learn/cookbooks/qovery.md)
 
+### Running Meilisearch
+
 On successfully running MeiliSearch, you should see the following response:
 
 ```
@@ -147,19 +149,19 @@ Database path:       "./data.ms"
 Server listening on: "127.0.0.1:7700"
 ```
 
-Please note that **if you're using a terminal, you will need to open a second window in addition the one running MeiliSearch and use that second window to send the curl commands**.
+You're ready to move on to the next step!
 
 ## Step 2: Add documents
 
-Now that you have [successfully launched a MeiliSearch instance](#step-1-setup-and-installation), the next step is adding some data to search through.
+For this quick start, we will be using a collection of movies as our dataset. To follow along, first click this link to download the file: <a id="downloadMovie" href="/movies.json" download="movies.json">movies.json</a>. Then, move the downloaded file into your working directory.
 
-MeiliSearch stores data in the form of discrete records, called [documents](/learn/core_concepts/documents.md). Documents are grouped into large collections, called [indexes](/learn/core_concepts/indexes.md).
-
-To create an index called `movies` and add documents there, run the following command:
+Open a new terminal window and run the following command:
 
 <CodeSamples id="getting_started_add_documents_md" />
 
-After adding documents, you should receive a response like this:
+MeiliSearch stores data in the form of discrete records, called [documents](/learn/core_concepts/documents.md). Documents are grouped into collections, called [indexes](/learn/core_concepts/indexes.md).
+
+The previous command added documents from `movies.json` to a new index called `movies`. After adding documents, you should receive a response like this:
 
 ```json
 {
@@ -171,13 +173,13 @@ After adding documents, you should receive a response like this:
 }
 ```
 
-Like most database operations in MeiliSearch, document addition is [asynchronous](/learn/advanced/asynchronous_updates.md). This means that the operation will be added to a queue and processed when it reaches the front, rather than happening immediately.
+Most database operations in MeiliSearch are [asynchronous](/learn/advanced/asynchronous_updates.md). This means that rather than being processed instantly, **API requests are added to a queue and processed when they reach the front**.
 
-You can use the returned `uid` to [check the status](/reference/api/updates.md) of your document addition request:
+Use the returned `uid` to [check the status](/reference/api/updates.md) of your documents:
 
 <CodeSamples id="getting_started_check_task_status_md" />
 
-If the document addition is successful, your response should look like this:
+If the document addition is successful, the response should look like this:
 
 ```json
 {
@@ -196,7 +198,7 @@ If the document addition is successful, your response should look like this:
 }
 ```
 
-If the task's `status` is still `enqueued` or `processing`, the response may look slightly different. All you have to do is wait a short time and try again. Once the task `status` is `succeeded`, proceed to the next step.
+If the `status` field has the value `enqueued` or `processing`, all you have to do is wait a short time and try again. Proceed to the next step once the task `status` has changed to `succeeded`.
 
 ## Step 3: Search
 
@@ -206,7 +208,7 @@ Now that you have MeiliSearch all set up, let's start searching!
 
 In the above code sample, the parameter `q` represents the search query. The documents you added in [step two](#step-2-add-documents) will be searched for text that matches `botman`.
 
-MeiliSearch **response**:
+**MeiliSearch response**:
 
 ```json
 {
@@ -238,16 +240,14 @@ You may notice that by default, MeiliSearch only returns the first 20 results fo
 
 ## Step 4: Search preview
 
-MeiliSearch offers an out-of-the-box search preview where you can test it interactively. While MeiliSearch is running, you can access it on your browser at `http://127.0.0.1:7700`.
-
-If your MeiliSearch instance does not have any indexes, you should see this screen.
-
-![no documents](/getting-started/web_interface_without_documents.png)
-
-If you have multiple indexes, you can switch between them using the indexes dropdown.
+MeiliSearch offers an in-browser interface where you can preview search results. You can access it on your browser at `http://127.0.0.1:7700` anytime MeiliSearch is running.
 
 ![multiple indexes](/getting-started/multiple_indexes.png)
 
-## And that's it
+If you have multiple indexes, you can switch between them using the indexes dropdown.
 
-You now know all the basics: how to create an index, add documents, check the status of an asynchronous task, and perform a search. To keep going, check out [MeiliSearch 101](/learn/getting_started/chapter_1_filtering_and_sorting.md) for a guided overview of the main features or the [API references](/reference/api/README.md) to dive right in!
+## What's next?
+
+You now know all the basics: how to create an index, add documents, check the status of an asynchronous task, and perform a search.
+
+To keep going, continue to the [MeiliSearch 101](/learn/getting_started/chapter_1_filtering_and_sorting.md) for a guided overview of the main features, or check out the [API references](/reference/api/README.md) to dive right in!
