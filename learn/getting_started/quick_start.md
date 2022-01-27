@@ -236,11 +236,11 @@ In the above code sample, the parameter `q` represents the search query. The doc
 }
 ```
 
-You may notice that by default, MeiliSearch only returns the first 20 results for a search query. This can be changed using the [`limit` parameter](/reference/features/search_parameters.md#limit).
+By default, MeiliSearch only returns the first 20 results for a search query. This can be changed using the [`limit` parameter](/reference/features/search_parameters.md#limit).
 
 ## Step 4: Search preview
 
-MeiliSearch offers an in-browser interface where you can preview search results. You can access it on your browser at `http://127.0.0.1:7700` anytime MeiliSearch is running.
+MeiliSearch offers an in-browser interface where you can preview search results. You can access it in your browser at `http://127.0.0.1:7700` any time MeiliSearch is running.
 
 ![multiple indexes](/getting-started/multiple_indexes.png)
 
