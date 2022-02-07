@@ -1,101 +1,101 @@
 # Quick start
 
-In this quick start we will walk you through setting up MeiliSearch, adding documents, performing your first search, and introduce you to the search preview.
+In this quick start we will walk you through setting up Meilisearch, adding documents, performing your first search, and introduce you to the search preview.
 
-All that is required is a [command line](https://www.learnenough.com/command-line-tutorial#sec-running_a_terminal) for installation, and some way to interact with MeiliSearch afterwards (e.g. [cURL](https://curl.se) or one of our [SDKs](/learn/what_is_meilisearch/sdks.md)).
+All that is required is a [command line](https://www.learnenough.com/command-line-tutorial#sec-running_a_terminal) for installation, and some way to interact with Meilisearch afterwards (e.g. [cURL](https://curl.se) or one of our [SDKs](/learn/what_is_Meilisearch/sdks.md)).
 
 Let's get started!
 
 ## Step 1: Setup and installation
 
-We'll start with downloading and installing MeiliSearch. You have the option to install MeiliSearch locally or deploy it over a cloud service.
+We'll start with downloading and installing Meilisearch. You have the option to install Meilisearch locally or deploy it over a cloud service.
 
 ### Local installation
 
 :::: tabs
 
 ::: tab cURL
-Download the **latest stable release** of MeiliSearch with **cURL**.
+Download the **latest stable release** of Meilisearch with **cURL**.
 
-Launch MeiliSearch to start the server.
+Launch Meilisearch to start the server.
 
 ```bash
-# Install MeiliSearch
-curl -L https://install.meilisearch.com | sh
+# Install Meilisearch
+curl -L https://install.Meilisearch.com | sh
 
-# Launch MeiliSearch
-./meilisearch
+# Launch Meilisearch
+./Meilisearch
 ```
 
 :::
 
 ::: tab Homebrew
-Download the **latest stable release** of MeiliSearch with **Homebrew**.
+Download the **latest stable release** of Meilisearch with **Homebrew**.
 
-Launch MeiliSearch to start the server.
+Launch Meilisearch to start the server.
 
 ```bash
-# Update brew and install MeiliSearch
-brew update && brew install meilisearch
+# Update brew and install Meilisearch
+brew update && brew install Meilisearch
 
-# Launch MeiliSearch
-meilisearch
+# Launch Meilisearch
+Meilisearch
 ```
 
 :::
 
 ::: tab Docker
-Using **Docker** you can choose to run [any available tag](https://hub.docker.com/r/getmeili/meilisearch/tags).
+Using **Docker** you can choose to run [any available tag](https://hub.docker.com/r/getmeili/Meilisearch/tags).
 
-This command starts the **latest stable release** of MeiliSearch.
+This command starts the **latest stable release** of Meilisearch.
 
 ```bash
-# Fetch the latest version of MeiliSearch image from DockerHub
-docker pull getmeili/meilisearch:latest
+# Fetch the latest version of Meilisearch image from DockerHub
+docker pull getmeili/Meilisearch:latest
 
-# Launch MeiliSearch
+# Launch Meilisearch
 docker run -it --rm \
     -p 7700:7700 \
     -v $(pwd)/data.ms:/data.ms \
-    getmeili/meilisearch:latest
+    getmeili/Meilisearch:latest
 ```
 
-Data written to a **Docker container is not persistent** and is deleted along with the container when the latter is stopped. Docker volumes are not deleted when containers are removed. It is then recommended to share volumes between your containers and your host machine to provide persistent storage. MeiliSearch writes data to `/data.ms`
+Data written to a **Docker container is not persistent** and is deleted along with the container when the latter is stopped. Docker volumes are not deleted when containers are removed. It is then recommended to share volumes between your containers and your host machine to provide persistent storage. Meilisearch writes data to `/data.ms`
 
 You can learn more about Docker on the [official documentation](https://docs.docker.com/get-docker/).
 :::
 
 ::: tab APT
 
-Download the **latest stable release** of MeiliSearch with **APT**.
+Download the **latest stable release** of Meilisearch with **APT**.
 
-Launch MeiliSearch to start the server.
+Launch Meilisearch to start the server.
 
 ```bash
-# Add MeiliSearch package
-echo "deb [trusted=yes] https://apt.fury.io/meilisearch/ /" > /etc/apt/sources.list.d/fury.list
+# Add Meilisearch package
+echo "deb [trusted=yes] https://apt.fury.io/Meilisearch/ /" > /etc/apt/sources.list.d/fury.list
 
-# Update APT and install MeiliSearch
-apt update && apt install meilisearch-http
+# Update APT and install Meilisearch
+apt update && apt install Meilisearch-http
 
-# Launch MeiliSearch
-meilisearch
+# Launch Meilisearch
+Meilisearch
 ```
 
 :::
 
 ::: tab Source
 
-MeiliSearch is written in `Rust`. To compile it, [installing the Rust toolchain](https://www.rust-lang.org/tools/install) is required.
+Meilisearch is written in `Rust`. To compile it, [installing the Rust toolchain](https://www.rust-lang.org/tools/install) is required.
 
 If the Rust toolchain is already installed, clone the repository on your local system and change it to your working directory.
 
 ```bash
-git clone https://github.com/meilisearch/MeiliSearch
-cd MeiliSearch
+git clone https://github.com/Meilisearch/Meilisearch
+cd Meilisearch
 ```
 
-In the cloned repository, compile MeiliSearch.
+In the cloned repository, compile Meilisearch.
 
 ```bash
 # Update the rust toolchain to the latest version
@@ -105,17 +105,17 @@ rustup update
 cargo build --release
 
 # Execute the server binary
-./target/release/meilisearch
+./target/release/Meilisearch
 ```
 
 :::
 
 ::: tab Windows
 
-To install MeiliSearch on Windows, you can:
+To install Meilisearch on Windows, you can:
 
 - use Docker (see "Docker" tab above)
-- [download the latest binary](https://github.com/meilisearch/MeiliSearch/releases)
+- [download the latest binary](https://github.com/Meilisearch/Meilisearch/releases)
 - use the installation script (see "cURL" tab above) if you have installed [Cygwin](https://www.cygwin.com/) or equivalent
 - compile from source (see "Source" tab above)
 
@@ -125,7 +125,7 @@ To learn more about the Windows command prompt, follow this [introductory guide]
 
 ### Cloud deploy
 
-To deploy MeiliSearch on a cloud service, follow one of our dedicated guides:
+To deploy Meilisearch on a cloud service, follow one of our dedicated guides:
 
 - [AWS](/learn/cookbooks/aws.md)
 - [DigitalOcean](/learn/cookbooks/digitalocean_droplet.md)
@@ -133,7 +133,7 @@ To deploy MeiliSearch on a cloud service, follow one of our dedicated guides:
 
 ### Running Meilisearch
 
-On successfully running MeiliSearch, you should see the following response:
+On successfully running Meilisearch, you should see the following response:
 
 ```
 888b     d888          d8b 888 d8b  .d8888b.                                    888
@@ -159,7 +159,7 @@ Open a new terminal window and run the following command:
 
 <CodeSamples id="getting_started_add_documents_md" />
 
-MeiliSearch stores data in the form of discrete records, called [documents](/learn/core_concepts/documents.md). Documents are grouped into collections, called [indexes](/learn/core_concepts/indexes.md).
+Meilisearch stores data in the form of discrete records, called [documents](/learn/core_concepts/documents.md). Documents are grouped into collections, called [indexes](/learn/core_concepts/indexes.md).
 
 The previous command added documents from `movies.json` to a new index called `movies`. After adding documents, you should receive a response like this:
 
@@ -173,7 +173,7 @@ The previous command added documents from `movies.json` to a new index called `m
 }
 ```
 
-Most database operations in MeiliSearch are [asynchronous](/learn/advanced/asynchronous_updates.md). This means that rather than being processed instantly, **API requests are added to a queue and processed when they reach the front**.
+Most database operations in Meilisearch are [asynchronous](/learn/advanced/asynchronous_updates.md). This means that rather than being processed instantly, **API requests are added to a queue and processed when they reach the front**.
 
 Use the returned `uid` to [check the status](/reference/api/updates.md) of your documents:
 
@@ -202,13 +202,13 @@ If the `status` field has the value `enqueued` or `processing`, all you have to 
 
 ## Step 3: Search
 
-Now that you have MeiliSearch all set up, let's start searching!
+Now that you have Meilisearch all set up, let's start searching!
 
 <CodeSamples id="getting_started_search_md" />
 
 In the above code sample, the parameter `q` represents the search query. The documents you added in [step two](#step-2-add-documents) will be searched for text that matches `botman`.
 
-**MeiliSearch response**:
+**Meilisearch response**:
 
 ```json
 {
@@ -236,11 +236,11 @@ In the above code sample, the parameter `q` represents the search query. The doc
 }
 ```
 
-By default, MeiliSearch only returns the first 20 results for a search query. This can be changed using the [`limit` parameter](/reference/features/search_parameters.md#limit).
+By default, Meilisearch only returns the first 20 results for a search query. This can be changed using the [`limit` parameter](/reference/features/search_parameters.md#limit).
 
 ## Step 4: Search preview
 
-MeiliSearch offers an in-browser interface where you can preview search results. You can access it in your browser at `http://127.0.0.1:7700` any time MeiliSearch is running.
+Meilisearch offers an in-browser interface where you can preview search results. You can access it in your browser at `http://127.0.0.1:7700` any time Meilisearch is running.
 
 ![multiple indexes](/getting-started/multiple_indexes.png)
 
@@ -250,4 +250,4 @@ If you have multiple indexes, you can switch between them using the indexes drop
 
 You now know all the basics: how to create an index, add documents, check the status of an asynchronous task, and perform a search.
 
-To keep going, continue to the [MeiliSearch 101](/learn/getting_started/chapter_1_filtering_and_sorting.md) for a guided overview of the main features, or check out the [API references](/reference/api/README.md) to dive right in!
+To keep going, continue to the [Meilisearch 101](/learn/getting_started/chapter_1_filtering_and_sorting.md) for a guided overview of the main features, or check out the [API references](/reference/api/README.md) to dive right in!
