@@ -522,6 +522,20 @@ getting_started_sorting_md: |-
       "sort": [
         "mass:asc"
       ]}'
+getting_started_configure_settings: |-
+  curl \
+    -X POST 'http://localhost:7700/indexes/meteors/settings' \
+    -H 'Content-Type: application/json' \
+    --data-binary '{
+        "filterableAttributes": [
+            "mass",
+            "_geo"
+        ],
+        "sortableAttributes": [
+            "mass",
+            "_geo"
+        ],
+    }'   
 getting_started_communicating_with_a_protected_instance: |-
   curl -X POST 'http://127.0.0.1:7700/indexes/patient_medical_records/search' \
     -H 'Authorization: Bearer apiKey'      
