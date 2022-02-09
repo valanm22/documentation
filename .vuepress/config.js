@@ -61,13 +61,12 @@ module.exports = {
             '/learn/getting_started/quick_start',
             {
               title: 'MeiliSearch 101',
-              path: '/learn/getting_started/chapter_1_filtering_and_sorting/',
+              path: '/learn/getting_started/filtering_and_sorting/',
               collapsable: false,
               children: [
-                '/learn/getting_started/chapter_1_filtering_and_sorting',
-                '/learn/getting_started/chapter_2_customizing_relevancy',
-                '/learn/getting_started/chapter_3_adding_a_visual_UI',
-                '/learn/getting_started/chapter_4_configuration_and_security',
+                '/learn/getting_started/filtering_and_sorting',
+                '/learn/getting_started/customizing_relevancy',
+                '/learn/getting_started/configuration_and_security',
               ],
             },
           ],

@@ -2,9 +2,9 @@
 
 Welcome to the Meilisearch 101! This guide aims to introduce you to the main features of Meilisearch as efficiently as possible. It assumes that you have completed the [Quick start](/learn/getting_started/quick_start.md) and already have a running Meilisearch instance.
 
-This chapter uses a dataset of meteors to demonstrate filtering, sorting, and geosearch. To follow along, first click this link to download the file: <a id="downloadMeteors" href="/meteors.json" download="meteors.json">meteors.json</a>. Then, move it into your working directory and run the following command:
+This chapter uses a dataset of meteorites to demonstrate filtering, sorting, and geosearch. To follow along, first click this link to download the file: <a id="downloadmeteorites" href="/meteorites.json" download="meteorites.json">meteorites.json</a>. Then, move it into your working directory and run the following command:
 
-<CodeSamples id="getting_started_add_meteors_md" />
+<CodeSamples id="getting_started_add_meteorites_md" />
 
 ## Settings
 
@@ -14,7 +14,7 @@ The `settings` object contains two arrays for this purpose: `filterableAttribute
 
 <CodeSamples id= "getting_started_configure_settings" />
 
->Running the above code sample should set you up for the next sections.
+The above code sample adds `mass` and `_geo` to `filterableAttributes` and `sortableAttributes` setting you up for the next sections.
 
 To learn more about the `settings` object and how to configure it, refer to our [dedicated guide](/reference/features/settings.md).
 
@@ -22,7 +22,7 @@ To learn more about the `settings` object and how to configure it, refer to our 
 
 Meilisearch allows you to refine your search using filters. You can use any document fields for filtering by adding them to `filterableAttributes` as shown [above](#settings).
 
-Let's say you only want to view meteors that weigh less than 200g:
+Let's say you only want to view meteorites that weigh less than 200g:
 
 <CodeSamples id= "getting_started_filtering_md" />
 
@@ -58,7 +58,7 @@ By default, Meilisearch orders results according to their relevancy. You can alt
 
 You can use any document field for sorting as long as it contains numbers, strings, arrays of numbers, or arrays of strings and has been added to `sortableAttributes` as shown [above](#settings).
 
-Let's sort the meteors in the previous example based on mass:
+Let's sort the meteorites in the previous example based on mass:
 
 <CodeSamples id= "getting_started_sorting_md" />
 
@@ -84,7 +84,7 @@ Let's sort the meteors in the previous example based on mass:
   }
 ```
 
-You will see all meteors weighing less than 200g sorted by increasing mass. To sort them in the opposite direction, you would use `mass:desc`.
+You will see all meteorites weighing less than 200g sorted by increasing mass. To sort them in the opposite direction, you would use `mass:desc`.
 
 Sorting is intended to be combined with search queries to refine your results.
 
@@ -96,7 +96,7 @@ Meilisearch allows you to filter and sort results based on their geographic loca
 
 ### Filtering by geographical location
 
-Let's say you want to find out which meteors crashed within a 210km radius of Bern:
+Let's say you want to find out which meteorites crashed within a 210km radius of Bern:
 
 <CodeSamples id= "getting_started_geoRadius_md" />
 
@@ -142,7 +142,7 @@ Let's say you want to find out which meteors crashed within a 210km radius of Be
 
 ### Sorting by geographical location
 
-The following command sorts meteors by how close they were to the Taj Mahal:
+The following command sorts meteorites by how close they were to the Taj Mahal:
 
 <CodeSamples id= "getting_started_geoPoint_md" />
 
@@ -188,7 +188,7 @@ The following command sorts meteors by how close they were to the Taj Mahal:
   }
 ```
 
-This response returns an additional field, `_geoDistance`, representing the distance between the Taj Mahal and each meteor in meters.
+This response returns an additional field, `_geoDistance`, representing the distance between the Taj Mahal and each meteorite in meters.
 
 To learn more about geosearch and how to configure it, refer to our [dedicated guide](/reference/features/geosearch.md).
 

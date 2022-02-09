@@ -29,7 +29,7 @@ The order of the `rankingRules` array matters: the first rule has the most impac
 
 You can read more about each ranking rule and what it does in our [dedicated guide](/learn/core_concepts/relevancy.md#built-in-rules).
 
-In this example, we change the order of the ranking rules for the `meteors` index by moving `exactness` to the top:
+In this example, we change the order of the ranking rules for the `meteorites` index by moving `exactness` to the top:
 
 <CodeSamples id= "getting_started_update_rankingRules_md" />
 
