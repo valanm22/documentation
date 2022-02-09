@@ -246,6 +246,8 @@ Meilisearch offers an in-browser interface where you can preview search results.
 
 If you have multiple indexes, you can switch between them using the indexes dropdown.
 
+## Step 5: Front-end integration
+
 ## What's next?
 
 You now know all the basics: how to create an index, add documents, check the status of an asynchronous task, and perform a search.

@@ -534,7 +534,7 @@ getting_started_configure_settings: |-
         "sortableAttributes": [
             "mass",
             "_geo"
-        ],
+        ]
     }'   
 getting_started_communicating_with_a_protected_instance: |-
   curl -X POST 'http://127.0.0.1:7700/indexes/patient_medical_records/search' \
