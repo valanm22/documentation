@@ -66,7 +66,7 @@ module.exports = {
               children: [
                 '/learn/getting_started/filtering_and_sorting',
                 '/learn/getting_started/customizing_relevancy',
-                '/learn/getting_started/configuration_and_security',
+                '/learn/getting_started/getting_ready_for_production',
               ],
             },
           ],
